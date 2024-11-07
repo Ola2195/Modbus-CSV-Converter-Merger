@@ -24,7 +24,7 @@ This script reads a TXT file containing Modbus slave configuration and saves the
 
 The input TXT file should contain lines with Modbus slave configuration data in the following format:
 
-```
+```console
 M <Nr_rejestru> <Nr_punktu> <Typ_pam> <Post_wart> <WspA> <WspB> <Ofset_bitu> <Ilosc_bitow>
 R <Nr_rejestru> <Nr_punktu> <Typ_pam> <Post_wart> <WspA> <WspB> <Ofset_bitu> <Ilosc_bitow>
 ```
@@ -41,14 +41,14 @@ R <Nr_rejestru> <Nr_punktu> <Typ_pam> <Post_wart> <WspA> <WspB> <Ofset_bitu> <Il
 
 Example of an input file (`modbus_slave_config.txt`):
 
-```
+```console
 M 100 200 S 1 10 20 5 16
 R 101 201 F 2 12 22 7 32
 ```
 
 #### Usage
 
-```bash
+```console
 python txt_to_csv_modbus.py <input_file_path> [output_file_path]
 ```
 
@@ -57,7 +57,7 @@ python txt_to_csv_modbus.py <input_file_path> [output_file_path]
 
 #### Example
 
-```bash
+```console
 python txt_to_csv_modbus.py modbus_config.txt modbus_config.csv
 ```
 
@@ -71,7 +71,7 @@ This script reads a TXT file containing point descriptions and saves the data in
 
 The input TXT file should contain lines with point descriptions in the following format:
 
-```
+```console
 .|<Nr_punktu>|<Nazwa_punktu>|<OtherField1>|<OtherField2>
 ```
 
@@ -81,14 +81,14 @@ The input TXT file should contain lines with point descriptions in the following
 
 Example of an input file (`eps_opisy_punktow.txt`):
 
-```
+```console
 .|100|Temperature|Field1|Field2
 .|101|Pressure|Field1|Field2
 ```
 
 #### Usage
 
-```bash
+```console
 python txt_to_csv_eps.py <input_file_path> [output_file_path]
 ```
 
@@ -97,7 +97,7 @@ python txt_to_csv_eps.py <input_file_path> [output_file_path]
 
 #### Example
 
-```bash
+```console
 python txt_to_csv_eps.py points_list.txt points_list.csv
 ```
 
@@ -109,7 +109,7 @@ This script merges two CSV files based on the common column `Nr_punktu`.
 
 #### Usage
 
-```bash
+```console
 python merge_csv_files.py <input_file1> <input_file2> [output_file]
 ```
 
@@ -119,7 +119,7 @@ python merge_csv_files.py <input_file1> <input_file2> [output_file]
 
 #### Example
 
-```bash
+```console
 python merge_csv_files.py file1.csv file2.csv merged_output.csv
 ```
 
